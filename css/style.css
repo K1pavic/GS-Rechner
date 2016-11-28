@@ -1,0 +1,53 @@
+html body {
+    min-height: 100%;
+    background-color: #062230;
+}
+
+.header {
+    background-color: #ffffff !important;
+    margin-bottom: 20px;
+}
+
+#tele2 {
+    padding-left: 30px;
+}
+
+#transcom {
+    float: right !important;
+    padding-right: 10px;
+}
+
+.images {
+    padding: 20px;
+}
+
+form {
+    padding: 0 50px 20px 50px !important;
+}
+
+label {
+    color: #ffffff;
+}
+
+#von {
+    margin-bottom: 10px;
+}
+
+#resultat {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#resSuccess {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+#rabatt {
+    margin-top: 15px;
+}
+
+#author {
+    color: #062230;
+}

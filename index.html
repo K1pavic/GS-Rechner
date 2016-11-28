@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kristian Pavic">
+
+    <title>Tele2 GS Rechner</title>
+
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <noscript>
+    For full functionality of this site it is necessary to enable JavaScript.
+    Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+    instructions how to enable JavaScript in your web browser</a>.
+</noscript>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://eg.com/img/favicon.png" />
+</head>
+
+<body>
+
+    <div id="back" class="container-fluid">
+
+        <div class="row header">
+
+            <div id="tele2" class="images img-responsive col-lg-6 col-md-6 col-sm-6">
+
+                <img src="img/tele2.png" />
+
+            </div>
+
+            <div class="images img-responsive col-lg-6 col-md-6 col-sm-6">
+
+                <div id="transcom">
+                    <img src="img/transcom.png" />
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <form class="col-lg-6 col-md-6 col-sm-8 col-lg-offset-3 col-md-offset-3 col-sm-offset-2" id="form_input">
+                <div class="form-group">
+                    <label for="GG">Grundgebühr</label>
+                    <input type="number" class="form-control" id="gg" placeholder="zB. 9.95">
+                </div>
+
+                <label for="extra">Zusatzgebühren</label>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Auswählen <span class="caret"></span></button>
+
+                        <ul class="dropdown-menu">
+                            <li onclick="kein()"><a href="#">Kein Eintrag</a></li>
+                            <li onclick="fsecure()"><a href="#">F-Secure (3.95€)</a></li>
+                            <li onclick="HW1()"><a href="#">HW-Miete Router 1-Port (2€)</a></li>
+                            <li onclick="HW2()"><a href="#">HW-Miete Router W-lan (3€)</a></li>
+                            <li onclick="HW3()"><a href="#">HW-Miete Router W-lan und Stick (5€)</a></li>
+                        </ul>
+
+                    </div>
+
+                    <input id="extra" type="number" class="form-control" aria-label="" placeholder="zB. -2.5">
+                </div>
+
+                <div id="rabatt" class="form-group">
+                    <label for="rabbat">Rabatt in %</label>
+                    <input type="number" class="form-control" id="rabbat" placeholder="zB. 5.00">
+                </div>
+                <div class="form-group">
+                    <label for="von">Zeitraum</label>
+                    <input type="date" class="form-control date" id="von" placeholder="zB. 21.10.2013">
+                    <input type="date" class="form-control date" id="biss" placeholder="zB. 16.5.2016">
+                </div>
+
+                <button type="button" class="btn btn-default" onclick="calculate()">Ausrechnen</button>
+
+                <div id=resSuccess class="form-group alert-success">
+                    <p id="resultat"></p>
+                </div>
+            </form>
+
+        </div>
+
+        <p id="author">K.P.</p>
+
+    </div>
+
+</body>
+
+</html>
